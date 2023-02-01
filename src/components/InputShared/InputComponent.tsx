@@ -4,14 +4,12 @@ import { InputData } from "./types";
 
 const InputComponent: React.FC<InputData> = ({ formData }) => {
   return (
-    <div>
-      <InputField
-        value={formData.value}
-        onChange={(e) => formData.setValue(e.target.value)}
-        type="text"
-        placeholder="enter your password"
-      />
-    </div>
+    <InputField
+      value={formData.value}
+      onChange={(e) => formData.setValue(e.target.value)}
+      type="text"
+      placeholder="enter your password"
+    />
   );
 };
 

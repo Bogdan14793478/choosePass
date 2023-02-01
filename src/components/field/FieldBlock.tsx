@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { FieldBlockStyle } from "./styles";
 import { FieldProps } from "./types";
 
-const FieldBlock: React.FC<FieldProps> = ({ index, variant }) => {
+const FieldBlock: React.FC<FieldProps> = ({ lng, index, variant }) => {
   const [color, setColor] = useState<string>("");
 
   useEffect(() => {
@@ -26,7 +26,11 @@ const FieldBlock: React.FC<FieldProps> = ({ index, variant }) => {
     }
   }, [variant]);
 
-  return <FieldBlockStyle chooseBack={color}></FieldBlockStyle>;
+  return (
+    <FieldBlockStyle
+      chooseBackground={lng > 0 && lng < 8 ? "red" : color}
+    ></FieldBlockStyle>
+  );
 };
 
 export default FieldBlock;

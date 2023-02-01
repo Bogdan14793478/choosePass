@@ -16,9 +16,9 @@ const defaultBack = css`
   background-color: grey;
 `;
 
-export const FieldBlockStyle = styled.div<{ chooseBack?: string }>`
-  ${({ chooseBack }) => {
-    switch (chooseBack) {
+export const FieldBlockStyle = styled.div<{ chooseBackground?: string }>`
+  ${({ chooseBackground }) => {
+    switch (chooseBackground) {
       case "red":
         return redBack;
       case "yellow":

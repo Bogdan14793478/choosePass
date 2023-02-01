@@ -1,5 +1,5 @@
 import React from "react";
-import FieldBlock from "../../components/field/field";
+import FieldBlock from "../../components/Field/FieldBlock";
 import InputComponent from "../../components/InputShared/InputComponent";
 import { InputLogic } from "../../hook/InputLogic";
 import { FieldContainer, InputView, TitleView } from "./styles";
@@ -8,6 +8,7 @@ const countField = [1, 2, 3];
 
 export const InputWrapper = () => {
   const formData = InputLogic();
+  const length = formData.value.length;
   return (
     <InputView>
       <>
@@ -16,7 +17,11 @@ export const InputWrapper = () => {
         <FieldContainer>
           {countField.map((_, i) => (
             <div key={i}>
-              <FieldBlock variant={formData.variant} index={i + 1} />
+              <FieldBlock
+                lng={length}
+                variant={formData.variant}
+                index={i + 1}
+              />
             </div>
           ))}
         </FieldContainer>
