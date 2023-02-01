@@ -6,8 +6,6 @@ const FieldBlock: React.FC<FieldProps> = ({ index, variant }) => {
   const [color, setColor] = useState<string>("");
 
   useEffect(() => {
-    let back;
-    console.log("useeff work");
     if (variant > 2) {
       setColor("green");
     }
@@ -27,7 +25,6 @@ const FieldBlock: React.FC<FieldProps> = ({ index, variant }) => {
       setColor("grey");
     }
   }, [variant]);
-  console.log(color, "back");
 
   return <FieldBlockStyle chooseBack={color}></FieldBlockStyle>;
 };
