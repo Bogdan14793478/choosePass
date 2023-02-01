@@ -32,4 +32,5 @@ export const FieldBlockStyle = styled.div<{ chooseBack?: string }>`
   width: 40px;
   height: 100%;
   content: "";
+  margin-left: 5px;
 `;

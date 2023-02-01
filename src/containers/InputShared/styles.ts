@@ -23,7 +23,7 @@ export const TitleView = styled.div`
 
 export const FieldContainer = styled.div`
   display: flex;
-  width: 30%;
+  width: 20%;
   height: 10px;
   justify-content: space-evenly;
   margin-top: 10px;
