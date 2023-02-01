@@ -3,3 +3,5 @@ export interface FieldProps {
   variant: number;
   lng: number;
 }
+
+export type ColorVariant = "green" | "red" | "yellow" | "grey";

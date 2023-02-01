@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
 import { FieldBlockStyle } from "./styles";
-import { FieldProps } from "./types";
+import { ColorVariant, FieldProps } from "./types";
 
 const FieldBlock: React.FC<FieldProps> = ({ lng, index, variant }) => {
-  const [color, setColor] = useState<string>("");
+  const [color, setColor] = useState<ColorVariant>("grey");
 
   useEffect(() => {
     if (variant > 2) {
